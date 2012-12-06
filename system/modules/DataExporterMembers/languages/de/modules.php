@@ -30,6 +30,6 @@
 /**
  * Define name and tooltip for preferences (inactive modules)
  */
-$GLOBALS['TL_LANG']['MOD']['DataExporterEfgToSage'] = array('Datenexport von EFG nach SAGE', 'Stellt Exporter zur Verfügung, die EFG Daten nach SAGE exportieren.');
+$GLOBALS['TL_LANG']['MOD']['DataExporterMembers'] = array('Datenexport von Mitgliedern', 'Stellt einen Exporter zur Verfügung, der Mitglieder exportiert.');
 
 ?>

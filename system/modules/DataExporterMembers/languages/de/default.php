@@ -21,15 +21,15 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Net Cube GbR 2012
+ * @copyright  Cliff Parnitzky 2012
  * @author     Cliff Parnitzky
- * @package    DataExporterEfgToSage
+ * @package    DataExporterMembers
  * @license    LGPL
  */
 
 /**
  * Exporters
  */
-$GLOBALS['TL_LANG']['DATA_EXPORTER']['DataExporterMembersConfigurable'] = 'Konfigurierbarer Mitgliederexporter';
+$GLOBALS['TL_LANG']['DATA_EXPORTER']['DataExporterMembers'] = 'Mitgliederexporter';
 
 ?>

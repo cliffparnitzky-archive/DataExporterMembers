@@ -30,6 +30,6 @@
 /**
  * Fields
  */
-$GLOBALS['TL_LANG']['tl_content']['dataExporterInvoiceLastDate'] = array('Letztes Exportdatum von Rechnungsdaten', 'Wählen Sie das letzte Exportdatum von Rechnungsdaten. Beim Aufruf des Exporters im Frontend werden nur Daten vom aktuellen Datum bis zu diesem Tag exportiert. Wenn einmalig alles exportiert werden soll darf diese Feld keinen Wert enthalten.');
+$GLOBALS['TL_LANG']['tl_content']['dataExporterMembersFields'] = array('Mitgliederfelder', 'Wählen Sie die Mitgliederfelder aus, die in der Exportdatei enthalten sein sollen. Ändern Sie wenn gewünscht die Reihenfolger der Felder.');
 
 ?>

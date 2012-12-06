@@ -12,5 +12,5 @@
 -- 
 
 CREATE TABLE `tl_content` (
-  `dataExporterInvoiceLastDate` varchar(10) NOT NULL default ''
+  `dataExporterMembersFields` blob NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

@@ -28,18 +28,20 @@
  */
 
 /**
- * Class DataExporterMembersConfigurable
+ * Class DataExporterMembers
  *
- * The configurable exporter of member data.
+ * The exporter of member data.
  * @copyright  Cliff Parnitzky 2012
  * @author     Cliff Parnitzky
  * @package    Controller
  */
-class DataExporterMembersConfigurable extends AbstractDataExporter {
+class DataExporterMembers extends AbstractDataExporter {
 	/**
 	 * Create the export file
 	 */
 	public function createExportFile($objConfig) {
+		// read all members
+		// put the into a export file
 		return $objConfig->exportFolder . '/2012_08_12.csv';
 	}
 }

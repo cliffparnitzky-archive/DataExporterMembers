@@ -23,24 +23,54 @@
  * PHP version 5
  * @copyright  Cliff Parnitzky 2012
  * @author     Cliff Parnitzky
- * @package    DataExporter
+ * @package    DataExporterMembers
  * @license    LGPL
  */
 
 /**
  * Add palettes to tl_content
  */
-$GLOBALS['TL_DCA']['tl_content']['subpalettes']['exporter_DataExporterInvoice'] = 'dataExporterInvoiceLastDate';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['exporter_DataExporterMembers'] = 'dataExporterMembersFields';
 
 /**
  * Add fields to tl_content
  */
-$GLOBALS['TL_DCA']['tl_content']['fields']['dataExporterInvoiceLastDate'] = array
+$GLOBALS['TL_DCA']['tl_content']['fields']['dataExporterMembersFields'] = array
 (
-	'label'              => &$GLOBALS['TL_LANG']['tl_content']['dataExporterInvoiceLastDate'],
+	'label'              => &$GLOBALS['TL_LANG']['tl_content']['dataExporterMembersFields'],
 	'exclude'            => true,
-	'inputType'          => 'text',
-	'eval'               => array('rgxp'=>'date', 'datepicker'=>true, 'tl_class'=>'w50 wizard') 
+	'inputType'          => 'checkboxWizard',
+	'options_callback'   => array('DataExporterMembersContentHelper', 'getMemberFields'), 
+	'eval'               => array('mandatory'=>true, 'multiple'=>true) 
 );
+
+/**
+ * Class DataExporterMembersContentHelper
+ *
+ * Provide miscellaneous methods that are used by the data configuration array.
+ * @copyright  Cliff Parnitzky 2012
+ * @author     Cliff Parnitzky
+ * @package    Controller
+ */
+class DataExporterMembersContentHelper extends Backend {
+
+	/**
+	 * Return all member fields as HTML drop down menu
+	 * @return array
+	 */
+	public function getMemberFields() {
+		$this->loadLanguageFile('tl_member');
+		$this->loadDataContainer('tl_member');
+
+		$arrReturn = array();
+
+		// Get all excluded fields
+		foreach ($GLOBALS['TL_DCA']['tl_member']['fields'] as $k=>$v) {
+			$arrReturn[$k] = strlen($v['label'][0]) ? $v['label'][0] : $k;
+		}
+		asort($arrReturn);
+		return $arrReturn;
+	}
+}
 
 ?>
