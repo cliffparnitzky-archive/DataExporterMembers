@@ -3,6 +3,8 @@ Contao DataExporterMembers Extension
 
 Provides a special data exporter for members.
 
+**!!! PROOF OF CONCEPT !!!**
+
 
 Installation
 ------------
