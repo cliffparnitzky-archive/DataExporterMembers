@@ -30,7 +30,7 @@
 /**
  * Add palettes to tl_content
  */
-$GLOBALS['TL_DCA']['tl_content']['subpalettes']['exporter_DataExporterMembers'] = 'dataExporterMembersFields';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['exporter_DataExporterMembers'] = 'dataExporterMembersFields, dataExporterMembersGroups, isActive, gender';
 
 /**
  * Add fields to tl_content
@@ -42,6 +42,33 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['dataExporterMembersFields'] = array
 	'inputType'          => 'checkboxWizard',
 	'options_callback'   => array('DataExporterMembersContentHelper', 'getMemberFields'), 
 	'eval'               => array('mandatory'=>true, 'multiple'=>true) 
+);
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['dataExporterMembersGroups'] = array
+(
+	'label'              => &$GLOBALS['TL_LANG']['tl_content']['dataExporterMembersGroups'],
+	'exclude'            => true,
+	'inputType'          => 'checkboxWizard',
+	'foreignKey'         => 'tl_member_group.name',
+	'eval'               => array('mandatory'=>true, 'multiple'=>true) 
+);
+/*
+$GLOBALS['TL_DCA']['tl_content']['fields']['isActive'] = array
+(
+	'label'              => &$GLOBALS['TL_LANG']['tl_content']['isActive'],
+	'exclude'            => true,
+	'inputType'          => 'radio',
+	'options'			 => array( "Ja", "Nein"),
+	'eval'               => array('mandatory'=>true, 'multiple'=>true, 'tl_class' => 'w50') 
+);
+*/
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['gender'] = array
+(
+	'label'              => &$GLOBALS['TL_LANG']['tl_content']['gender'],	
+	'inputType'          => 'radio',
+	'options'			 => array("Nein", "Nur Männer", "Nur Frauen"),
+	'eval'               => array('mandatory'=>true, 'multiple'=>true, 'tl_class' => 'w50') 
 );
 
 /**

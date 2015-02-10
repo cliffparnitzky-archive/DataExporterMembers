@@ -12,5 +12,7 @@
 -- 
 
 CREATE TABLE `tl_content` (
-  `dataExporterMembersFields` blob NULL
+  `dataExporterMembersFields` blob NULL,
+  `dataExporterMembersGroups` blob NULL
+  `gender` varchar(10) NULL,  
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

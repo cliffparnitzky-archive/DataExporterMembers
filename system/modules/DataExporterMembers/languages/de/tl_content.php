@@ -31,5 +31,7 @@
  * Fields
  */
 $GLOBALS['TL_LANG']['tl_content']['dataExporterMembersFields'] = array('Mitgliederfelder', 'Wählen Sie die Mitgliederfelder aus, die in der Exportdatei enthalten sein sollen. Ändern Sie wenn gewünscht die Reihenfolger der Felder.');
-
+$GLOBALS['TL_LANG']['tl_content']['dataExporterMembersGroups'] = array('Mitgliedergruppe', 'Wählen Sie eine Gruppe aus, deren Daten anschließend exportiert werden');
+$GLOBALS['TL_LANG']['tl_content']['gender'] = array('Geschlecht berücksichtigen?', '');
+$GLOBALS['TL_LANG']['tl_content']['isActive'] = array('Nur aktive Mitglieder auflisten?', '');
 ?>
